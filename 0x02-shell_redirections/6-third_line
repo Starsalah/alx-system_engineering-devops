@@ -1,9 +1,2 @@
- #!/bin/bash
-line_count=1
-while read -r line; do
-  if [ $line_count -eq 3 ]; then
-    echo "$line"
-    break
-  fi
-  (( line_count++ ))
-done < "iacta"
+#!/bin/bash
+head -n 3 iacta | tail -n 1
